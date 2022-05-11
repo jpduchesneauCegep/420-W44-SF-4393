@@ -253,6 +253,8 @@ git version
 docker --version
 docker-compose --version
 
+**Attention** Si vous déposé plus d'une version, je ne corrige que le dernier dépôt fait sur LÉA dans travaux.
+
 ```
 ## Compétences développées
 
