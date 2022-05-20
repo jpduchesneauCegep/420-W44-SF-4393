@@ -56,7 +56,7 @@ sudo vgs
 Maintenant, nous allons étendre le "logical volume" :
 
 ```bash
-sudo -lvextend -l +100%FREE /dev/vgubuntu/root
+sudo lvextend -l +100%FREE /dev/vgubuntu/root
 ```
 Vérifier le résulat et placer l'information dans votre fichier : 
 ```bash
