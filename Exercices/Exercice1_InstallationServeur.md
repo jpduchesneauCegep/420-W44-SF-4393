@@ -48,7 +48,7 @@ Si vous ne l'avez pas encore fait, lors de la connection, faite une mise à jour
 
 ```
 sudo apt update
-sudo apt ugrade
+sudo apt upgrade
 ```
 **Question** : Qu'elle est la différence entre ces deux commandes ?
 
