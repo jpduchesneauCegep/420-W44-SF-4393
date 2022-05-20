@@ -56,7 +56,7 @@ sudo vgs
 Maintenant, nous allons étendre le "logical volume" :
 
 ```bash
-sudo -lvextend -l +100%FREE /dev/vgubuntu/root
+sudo lvextend -l +100%FREE /dev/vgubuntu/root
 ```
 Vérifier le résulat et placer l'information dans votre fichier : 
 ```bash
@@ -94,4 +94,4 @@ Note : les compétences sont développées en partie.
 
 - LVM : https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/index
 
-- zsh : http://https://kifarunix.com/install-and-setup-zsh-and-oh-my-zsh-on-ubuntu-20-04/ 
+- zsh : https://kifarunix.com/install-and-setup-zsh-and-oh-my-zsh-on-ubuntu-20-04/ 
