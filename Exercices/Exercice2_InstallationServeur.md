@@ -80,6 +80,11 @@ b -	Une fois la VM créée, lancez la VM et installez le serveur Ubuntu selon le
 
     - Patientez! L'INSTALLATION EST EN COURS.
  
+ 
+Une fenêtre vous proposant de redémarrer des services s'affichera. Laissez les services déjà cochés et continuez. Enfin, redémarrez votre serveur&nbsp;:
+```
+reboot
+```
 
 ## Partie 2 : Première utilisation de votre machine
 
@@ -96,10 +101,6 @@ sudo apt update
 sudo apt ugrade
 ```
 
-Une fenêtre vous proposant de redémarrer des services s'affichera. Laissez les services déjà cochés et continuez. Enfin, redémarrez votre serveur&nbsp;:
-```
-reboot
-```
 
 ### Vérification des partitions et du système
 
