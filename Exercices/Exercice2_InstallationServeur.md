@@ -96,6 +96,11 @@ sudo apt update
 sudo apt ugrade
 ```
 
+Une fenêtre vous proposant de redémarrer des services s'affichera. Laissez les services déjà cochés et continuez. Enfin, redémarrez votre serveur&nbsp;:
+```
+reboot
+```
+
 ### Vérification des partitions et du système
 
 - Ouvrez un terminal et tapez les commandes demandées :
