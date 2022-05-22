@@ -185,7 +185,7 @@ Pour Docker Compose, aller au site Web https://docs.docker.com/compose/install/.
 # Les informations à l'ouverture de la session 
 git version
 docker --version
-docker-compose --version
+docker compose version
 ```
 ## Compétences développées
 
