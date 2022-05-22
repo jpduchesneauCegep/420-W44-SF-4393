@@ -50,13 +50,13 @@ sudo pvs
 Par la suite, nous pouvont ajouter le disque dans le "volume group" :
 
 ```bash
-sudo vgextend vgubuntu /dev/sdb
+sudo vgextend ubuntu-vg /dev/sdb
 sudo vgs 
 ```
 Maintenant, nous allons étendre le "logical volume" :
 
 ```bash
-sudo lvextend -l +100%FREE /dev/vgubuntu/root
+sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 Vérifier le résulat et placer l'information dans votre fichier : 
 ```bash
