@@ -90,9 +90,6 @@ sudo lvs
 
 Note : les compétences sont développées en partie.
 
-## Références
-- Ubuntu : https://ubuntu.com/download/desktop
+## Référence
 
 - LVM : https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/index
-
-- zsh : http://https://kifarunix.com/install-and-setup-zsh-and-oh-my-zsh-on-ubuntu-20-04/ 
