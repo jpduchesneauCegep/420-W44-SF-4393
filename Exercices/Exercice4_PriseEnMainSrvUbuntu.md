@@ -148,7 +148,7 @@ $ls -l /etc/passwd
 $ls -l /etc/shadow
 $ls -l /home/{votre usager}
 ```
-Vous pouvez visualiser mes résultats [ici](Images/droit.png).
+Vous pouvez visualiser mes résultats [ici](images/droit.png).
 
 **Question** : Selon-vous, pourquoi seule root et le groupe shadow on le droit lecture sur /etc/shadow et que tous le monde peux lire /etc/passwd ?
 
