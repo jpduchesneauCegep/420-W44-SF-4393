@@ -158,11 +158,11 @@ Remettre une capture d’écran de la commande suivante, et ce pour les deux VMS
 Je dois pouvoir vous identifier sur la capture.
 Exemple de capture acceptable client: 
 
-![Capture acceptable](Images/captureAcceptable.jpg)
+![Capture acceptable](images/captureAcceptable.jpg)
 
 Exemple de capture acceptable serveur: 
 
-![Capture acceptable](Images/captureAcceptableSrv.jpg)
+![Capture acceptable](images/captureAcceptableSrv.jpg)
 
 
 
