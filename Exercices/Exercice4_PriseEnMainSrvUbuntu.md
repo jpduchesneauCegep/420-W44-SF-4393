@@ -8,7 +8,7 @@
 
 ## Prise en main de votre serveur
 
- Quand vous vous connectez à votre serveur, certaines [informations](Images/Connexion.png) importantes vous sont fournies. l'adresse IP est l'une de plus importante. Notez là.
+ Quand vous vous connectez à votre serveur, certaines [informations](images/Connexion.png) importantes vous sont fournies. l'adresse IP est l'une de plus importante. Notez là.
 
 
 Lors de l'installation, vous avez coché oui à l'installation d'un serveur SSH.
