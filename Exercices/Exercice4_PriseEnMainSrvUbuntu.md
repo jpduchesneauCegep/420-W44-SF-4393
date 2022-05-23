@@ -155,6 +155,11 @@ Vous pouvez visualiser mes résultats [ici](images/droit.png).
 ## Pour vérification
 Remettre une capture d’écran de la commande suivante, et ce pour les deux VMS (dans un seul fichier) de l'espace travaux, exercice 4 sur LÉA.
 
+```bash
+$ls -l /var/log/auth.log
+```
+
+
 Je dois pouvoir vous identifier sur la capture.
 Exemple de capture acceptable client: 
 
@@ -166,7 +171,5 @@ Exemple de capture acceptable serveur:
 
 
 
-```bash
-$ls -l /var/log/auth.log
-```
+
 **Fin exercice 4**
