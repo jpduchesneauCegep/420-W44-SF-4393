@@ -49,14 +49,25 @@ sudo pvs
 
 Par la suite, nous pouvons ajouter le disque dans le "volume group" :
 
+Pour le client :
 ```bash
 sudo vgextend vgubuntu /dev/sdb # Attention: prenez le nom que la commande sudo vgs pour vous renvoyer et le bon nom de disque.
 sudo vgs  
 ```
+Pour le serveur :
+```bash
+sudo vgextend ubuntu-vg /dev/sdb
+sudo vgs  
+```
 Maintenant, nous allons étendre le "logical volume" :
 
+Pour le client :
 ```bash
-sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv # ici j'utilise le nom complet de la partition logique renvoyé par la commande df.
+sudo lvextend -l +100%FREE /dev/vgubuntu/root # ici j'utilise le nom complet de la partition logique renvoyé par la commande df.
+```
+Pour le serveur :
+```bash
+sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
 ```
 Vérifier le résultat et placer l'information dans votre fichier : 
 ```bash
@@ -114,3 +125,4 @@ Note : les compétences sont développées en partie.
 ## Référence
 
 - LVM : https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/index
+
