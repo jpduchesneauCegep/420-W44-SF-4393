@@ -78,6 +78,27 @@ sudo vgs >> FichierLVM.txt
 sudo lvs >> FichierLVM.txt
 ```
 
+## Partie 4: Ajuster votre fichier /etc/fstab
+
+Débutons par une vérifications de l'état du fichier /etc/fstab avec la commande df :
+
+```bash
+df -H 
+```
+Remarqué l'entré pour votre partition lvm dont le point de montage est / (root). C'est à dire celle que nous avons étendu.
+Elle n'est pas étendu.
+
+Pour que le système de fichiers utilise la totalité des de l'espace disponibles, exécutez :
+sudo resize2fs /dev/VG1/LV1
+```bash
+sudo resize2fs /dev/mapper/vgubuntu-root #Le nom de la partition monté dans le fstab.
+```
+Le resize2fs est un utilitaire en ligne de commande qui vous permet de redimensionner des systèmes de fichiers ext2, ext3 ou ext4. 
+
+Note : L'extension d'un système de fichiers est une opération à risque modéré. Il est donc recommandé de sauvegarder l'intégralité de votre partition pour éviter toute perte de données.
+
+
+ 
 ## Pour vérification
 Remettre une capture d’écran des trois commandes suivantes, et ce pour les deux VMS (dans un seul fichier) de l'espace travaux, exercice 3 sur LÉA.
 
@@ -101,9 +122,7 @@ sudo lvs
 
 Note : les compétences sont développées en partie.
 
-## Références
-- Ubuntu : https://ubuntu.com/download/desktop
+## Référence
 
 - LVM : https://access.redhat.com/documentation/fr-fr/red_hat_enterprise_linux/6/html/logical_volume_manager_administration/index
 
-- zsh : http://https://kifarunix.com/install-and-setup-zsh-and-oh-my-zsh-on-ubuntu-20-04/ 
