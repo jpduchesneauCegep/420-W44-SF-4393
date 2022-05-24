@@ -56,7 +56,7 @@ Utilisez votre machine Ubuntu client (poste de développeur) pour établir une c
 
 - Dans un terminal sur le poste client taper la commande :
 ```bash
-$ssh {adresse ip du serveur}  [-l votre nom d'usager sur le serveur] [- port]
+$ssh {adresse ip du serveur}  [-l votre nom d'usager sur le serveur] [-p port]
 ```
 - Remarquez l'échange de la clé lors de la première connexion.
 - Vérifier par quelques commandes que vous êtes bien sur le serveur : 
