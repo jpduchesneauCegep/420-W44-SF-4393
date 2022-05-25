@@ -8,12 +8,12 @@
 - Environnement : virtuel, vsphere.
 
 
-Dans cette exercice nous allons mettre en place un environnement de tests. Pour rappel, c'est l’environnement de simulation. Généralement, l’environnement
+Dans cet exercice nous allons mettre en place un environnement de tests. Pour rappel, c'est l’environnement de simulation. Généralement, l’environnement
 de simulation est identique à celui de production, si bien que le matériel
 et les logiciels ne présentent pas de grandes différences lors de
 l’utilisation de l’application.
 
-Ici nous aurront les composants suivants : 
+Ici nous aurons les composants suivants : 
 - Nginx : serveur Web
 - MySQL : serveur de bases de données
 - PHP : Langage de programmation.
@@ -46,11 +46,11 @@ sudo apt upgrade
 ```
 
  
->[Attention] Nous allons régulièrement avoir besoin d'un editeur de texte en mode console. Vous pouvez utiliser l'un des éditeurs suivants : 
+>[Attention] nous allons régulièrement avoir besoin d'un éditeur de texte en mode console. Vous pouvez utiliser l'un des éditeurs suivants : 
 
  >**nano** c'est l'éditeur le plus basique, intégré à Ubuntu par défaut.
 
- >**vi** dans 99% des systèmes Unix/Linux vi est présent. Il est plus difficille à apprivoiséer mais très puissant. Voici un tutoriel en français si vous voulez vous y mettre : [L'éditeur de Texte VI](https://linux.goffinet.org/administration/traitement-du-texte/editeur-de-texte-vi/)
+ >**vi** dans 99% des systèmes Unix/Linux vi est présent. Il est plus difficile à apprivoiser, mais très puissant. Voici un tutoriel en français si vous voulez vous y mettre : [L'éditeur de Texte VI](https://linux.goffinet.org/administration/traitement-du-texte/editeur-de-texte-vi/)
 
 
 
@@ -68,13 +68,13 @@ Contenu du script :
 
 ```bash
 #!/bin/bash
-# Variable du fichier qui vas garder les informations :
+# Variable du fichier qui va garder les informations :
 Fichier="./espaceDisque.txt"
 
-date >> $Fichier   # Pour avoir la date et l'heure de l'exécution.
+date >> $Fichier   # pour avoir la date et l'heure de l'exécution.
 df -H | grep /dev/sda >> $Fichier # Envoi de l'information dans le fichier
 df -H | grep /dev/mapper/*  >> $Fichier
-# Le script vas afficher le résultat
+# Le script va afficher le résultat
 cat $Fichier
 ```
 
@@ -86,9 +86,9 @@ $chmod a+x espace.sh
 #Pour exécuter votre script bash :
 ./espace.sh
 ```
-Voici le résutat attendu :
+Voici le résultat attendu :
 
-![Mon résultat](images/espace.png)
+![mon résultat](images/espace.png)
 
 
 - Procéder à la mise à jour du serveur
