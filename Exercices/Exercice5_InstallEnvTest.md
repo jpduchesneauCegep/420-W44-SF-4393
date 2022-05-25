@@ -87,7 +87,7 @@ $chmod a+x espace.sh
 ./espace.sh
 ```
 Voici le résutat attendu :
-![Mon résultat](Images/espace.png)
+![Mon résultat](images/espace.png)
 
 
 - Procéder à la mise à jour du serveur
@@ -123,7 +123,7 @@ $sudo apt install nginx
 ```bash
 $systemctl status nginx
 ```
-- Véfifier le fonctionnement de votre serveur Web dans votre navigateur du poste client. ([images](Images/nginx.png))
+- Véfifier le fonctionnement de votre serveur Web dans votre navigateur du poste client. ([images](images/nginx.png))
 
 
 
@@ -184,7 +184,7 @@ $sudo service mysql status
 ```bash
 ./espace.sh
 ```
-[Cliquez pour voir  mon résultat](Images/espace2.png)
+[Cliquez pour voir  mon résultat](images/espace2.png)
 - Remarquez seule les partitions /root et /var ont changés.
 
 
@@ -216,7 +216,7 @@ $sudo mysql -u root -p
 
 
 
-[Cliquez pour voir  mon résultat](Images/conMySQL.png)
+[Cliquez pour voir  mon résultat](images/conMySQL.png)
 
 
 
@@ -331,7 +331,7 @@ phpinfo();
 
 ***[adresse IP du serveur]/info.php***
 
-[Image du navigateur](Images/info.png)
+[Image du navigateur](images/info.png)
 
 - Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiques.
 - Après avoir vérifié l'information, dans un environnement de production vous devriez supprimer ce fichier.
