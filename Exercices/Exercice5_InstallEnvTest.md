@@ -87,6 +87,7 @@ $chmod a+x espace.sh
 ./espace.sh
 ```
 Voici le résutat attendu :
+
 ![Mon résultat](images/espace.png)
 
 
