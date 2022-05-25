@@ -62,7 +62,7 @@ sudo apt upgrade
 ```bash
 mkdir scripts
 cd scripts
-$nano espace.sh
+nano espace.sh
 ```
 Contenu du script :
 
