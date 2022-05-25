@@ -2,71 +2,95 @@
 
 
 - Évaluation : formative
+- Type de travail : individuel
 - Durée estimée : 2 heures
-- Système d'exploitation : Ubuntu 20.04 Lts Client
+- Système d'exploitation : Linux Ubuntu client et serveur
+- Environnement : virtuel, vsphere.
 
 
+Dans cette exercice nous allons mettre en place un environnement de tests. Pour rappel, c'est l’environnement de simulation. Généralement, l’environnement
+de simulation est identique à celui de production, si bien que le matériel
+et les logiciels ne présentent pas de grandes différences lors de
+l’utilisation de l’application.
 
+Ici nous aurront les composants suivants : 
+- Nginx : serveur Web
+- MySQL : serveur de bases de données
+- PHP : Langage de programmation.
 
 ## Mise à jour du système
 
-
-
-
 Il est une bonne habitude de mettre à jour vos dépôts et votre système avant de procéder à des installations.
 
+- Procéder à la mise à jour de votre poste client: 
 
+```bash
+sudo apt update
+sudo apt upgrade
+```
 
+- Utilisez votre machine Ubuntu client (poste de développeur) pour établir une connexion avec votre serveur.
 
-Utilisez votre machine Ubuntu client (poste de développeur) pour établir une connexion avec votre serveur.
+```bash
+$ssh {adresse ip du serveur}  [-l votre nom d'usager sur le serveur] [-p port]
 
+sudo apt update
+sudo apt upgrade
+```
+
+- Procéder à la mise à jour de votre poste client: 
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+ 
+>[Attention] Nous allons régulièrement avoir besoin d'un editeur de texte en mode console. Vous pouvez utiliser l'un des éditeurs suivants : 
+
+ >**nano** c'est l'éditeur le plus basique, intégré à Ubuntu par défaut.
+
+ >**vi** dans 99% des systèmes Unix/Linux vi est présent. Il est plus difficille à apprivoiséer mais très puissant. Voici un tutoriel en français si vous voulez vous y mettre : [L'éditeur de Texte VI](https://linux.goffinet.org/administration/traitement-du-texte/editeur-de-texte-vi/)
 
 
 
 - Vérifier l'espace disque avant l'installation des applications supplémentaires.
-- Pour ce faire créer un script bash sur votre serveur:
+
+- Pour ce faire créer un script bash sur votre serveur que vous pourrez utiliser de façon périodique :
+
+
 ```bash
+mkdir scripts
+cd scripts
 $nano espace.sh
 ```
+Contenu du script :
+
 ```bash
 #!/bin/bash
-Fichier="espaceDisque.txt"
+# Variable du fichier qui vas garder les informations :
+Fichier="./espaceDisque.txt"
 
-
-
-
-date >> $Fichier
-df -H | grep /dev/sda >> $Fichier
-df -H | grep /dev/mapper/vgo*  >> $Fichier
-
-
-
-
+date >> $Fichier   # Pour avoir la date et l'heure de l'exécution.
+df -H | grep /dev/sda >> $Fichier # Envoi de l'information dans le fichier
+df -H | grep /dev/mapper/*  >> $Fichier
+# Le script vas afficher le résultat
 cat $Fichier
 ```
-- Sauvegardez votre fichier en tapant sur Crtl+X et répondez Yes
+
+- Sauvegardez votre fichier en tapant sur Crtl+X et répondez *Yes*
 - Faite la commande suivante pour rendre le script bash exécutable : 
-
-
-
 
 ```bash
 $chmod a+x espace.sh
 #Pour exécuter votre script bash :
 ./espace.sh
 ```
+Voici le résutat attendu :
+![Mon résultat](Images/espace.png)
 
 
-
-
-
-
-[Cliquez pour voir  mon résultat](Images/espace.png)
-
-
-
-
-- Procéder à la mise à jour 
+- Procéder à la mise à jour du serveur
 ```bash
 $sudo apt update
 $sudo apt upgrade
@@ -74,26 +98,21 @@ $sudo apt upgrade
 - et de nouveau, lancer votre script espace.sh
 - Vous ne devriez pas voir une différence notable, car une mise à jour ne prend pas beaucoup d'espace disque.
 
-
-
-
 ## Installation de Git
 
-
-
+Vous devriez toujours avoir git à "porter de main". Nous allons donc l'installer.
 
 ```bash
-$sudo add-apt-repository ppa:git-core/ppa
+$sudo add-apt-repository ppa:git-core/ppa 
 $sudo apt update
 $sudo apt upgrade
 $sudo apt install git
 $git --version
 ```
-
+- Expliquez la première commande add-apt-repository
 
 
 ## Installation NGINX
-
 
 
 ```bash
@@ -118,8 +137,8 @@ $systemctl status nginx
 $sudo apt install mysql-server-8.0
 ```
 - Répondez oui
-- Installer le script de sécurité MySQL.([Documentation MySQL](https://dev.mysql.com/doc/refman/5.7/en/mysql-secure-installation.html))
-- Pour rappel, ce programme vous permet d'améliorer la sécurité de votre installation MySQL de la manière suivante :
+- Installer le script de sécurité MySQL.([Documentation MySQL](https://dev.mysql.com/doc/refman/8.0/en/mysql-secure-installation.html))
+- Ce programme vous permet d'améliorer la sécurité de votre installation MySQL de la manière suivante :
     - Vous pouvez définir un mot de passe pour les comptes root.
     - Vous pouvez supprimer les comptes root qui sont accessibles depuis l'extérieur de l'hôte local.
     - Vous pouvez supprimer les comptes d'utilisateurs anonymes.
@@ -166,7 +185,7 @@ $sudo service mysql status
 ./espace.sh
 ```
 [Cliquez pour voir  mon résultat](Images/espace2.png)
-- Remarquez seule les partitions /root et /var ont changés.sudo
+- Remarquez seule les partitions /root et /var ont changés.
 
 
 
@@ -265,9 +284,6 @@ server {
         fastcgi_pass unix:/run/php/php7.4-fpm.sock;
     }
 }
-
-
-
 ```
 - Au besoin, aidez-vous du fichier suivant, pris de mon serveur : 
 [Fichier modifié](https://github.com/jpduchesneauCegep/420-W44-SF/blob/main/Module03_GestionServeur/default)
@@ -311,28 +327,18 @@ sudo nano /var/www/html/info.php
 phpinfo();
 ?>
 ```
-
-
-
 - Exécutez ce fichier dans votre navigateur en tapant l'URL suivant :
-
-
 
 ***[adresse IP du serveur]/info.php***
 
-
-
 [Image du navigateur](Images/info.png)
-
-
 
 - Un fichier info.php permet d'afficher les paramètres de PHP. Ces informations sont utiles si vous souhaitez vérifier votre configuration d’hébergement ou exécuter un logiciel qui nécessite des modules PHP spécifiques.
 - Après avoir vérifié l'information, dans un environnement de production vous devriez supprimer ce fichier.
-## Finalisation
+### Finalisation
 - Lancez le script espace.sh
 - Analysez l'espace disque utilisé par vos installations.
 
-
-
-**Fin exercice 5**
-
+## Pour vérification
+Remettre une capture d’écran de votre navigateur avec la fenêtre info.php dans l'espace travaux, exercice 5 sur LÉA.
+N'oubliez pas, je dois pouvoir identifier votre VMs.
