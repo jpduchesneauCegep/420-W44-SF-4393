@@ -97,7 +97,7 @@ $cp /etc/ssh/sshd_config /etc/ssh/sshd_configOld
 $cp /etc/ssh/sshd_configOld /etc/ssh/sshd_config
 ``` 
 
-![Dossier ssh](/images/DossierSSH.png)
+![Dossier ssh](images/DossierSSH.png)
 
 ##10 Techniques pour sécuriser votre serveur SSH : ##
 
