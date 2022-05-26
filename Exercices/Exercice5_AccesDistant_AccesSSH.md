@@ -8,8 +8,8 @@
 
 **Objectifs :**
 
-- Utilisiser des clés privées et publiques
-- Gérerer un serveur à distance
+- Utiliser des clés privées et publiques
+- Gérer un serveur à distance
 - Sécuriser l'accès SSH
 
 
@@ -19,7 +19,7 @@
 - Connectez-vous votre station de travail Ubuntu.
 - Prenez la clé publique générée lors de l'exercice 1 et publiez-la sur votre compte GitHub. Bien sûr, si vous n'avez pas de compte créez-en un. Vous pouvez-vous aidé du livre Pro Git page 163. Ce livre est  disponible sur Léa.
 - Rendez-vous sur mon dépôt à l'adresse [https://github.com/jpduchesneauCegep/ITV_Exercice5](https://github.com/jpduchesneauCegep/ITV_Exercice5)
-- Faite un Fork de mon dépôt. Voir dans le coin droite cet outil :
+- Faite un Fork de mon dépôt. Voir dans le coin droit cet outil :
 ![fork](images/fork.jpg)
 
 
@@ -37,7 +37,7 @@ Source : Pro Git
 - Récupérer votre fork don mon dépôt par la commande git clone nom de votre copie sur votre poste de travail.
 - Modifier le fichier README.md en y ajoutant votre nom dans la liste des contributeurs.
 - Pousser votre modification sur votre dépôt sur Git Hub avec la commande push. Si vous avez bien inséré votre clé SSH sur GitHub, vous ne devriez pas avoir besoin de vous authentifier.
-- Sur votre page de GitHub, faites une demande de Pull Request pour que j'accepte de modifier le dépôt principal de votre contribution. Soyez gentil, écrivez un message avec votre demande.  Si non, peux-être que j'accepterais pas votre demande.;-)
+- Sur votre page de GitHub, faites une demande de Pull Request pour que j'accepte de modifier le dépôt principal de votre contribution. Soyez gentil, écrivez un message avec votre demande.  Si non, peut-être que je n’accepterais pas votre demande.;-)
 
 
 Votre clé SSH pourra être utilisée toute la session entre votre poste client et votre compte GitHub.
@@ -57,7 +57,7 @@ Ce fichier va vous permettre de garder les informations de connexions sur les di
 Disons que vous vous connectez à un serveur dont l'IP est 10.100.2.50. Votre nom d'utilisateur est jpduches et le serveur est utilisé pour héberger votre site Web. Pour renforcer la sécurité de SSH, vous utilisez le port 1500 au lieu du port SSH 22 par défaut.
 Vous pouvez ajouter toutes ces informations de la manière suivante dans votre fichier ~/.ssh/config
 
-> [!Attention] Attention il s'agit d'un exemple. Si vous voulez le tester, utilisé votre nom d'Usager, l'adresse IP de votre serveur et le port 22 puisqu'il n'a pas été modifier. 
+> [!Attention] Attention il s'agit d'un exemple. Si vous voulez le tester, utilisé votre nom d'Usager, l'adresse IP de votre serveur et le port 22 puisqu'il n'a pas été modifié. 
 ```bash
 Host website
         Hostname 10.100.2.50
