@@ -299,7 +299,7 @@ Les versions plus récentes de SSH ont automatiquement activé le protocole 2, m
 
 # Remise
 
-- Faite une capture d'une connexion ssh à partir du fichier de configuration ou website est votre serveur disant.
+- Faite une capture d'une connexion ssh à partir du fichier de configuration qui permet de vous connecter à votre serveur disant sous le nom de website.
 
 ```bash
 ssh website
