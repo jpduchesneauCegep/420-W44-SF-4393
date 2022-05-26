@@ -57,7 +57,7 @@ Ce fichier va vous permettre de garder les informations de connexions sur les di
 Disons que vous vous connectez à un serveur dont l'IP est 10.100.2.50. Votre nom d'utilisateur est jpduches et le serveur est utilisé pour héberger votre site Web. Pour renforcer la sécurité de SSH, vous utilisez le port 1500 au lieu du port SSH 22 par défaut.
 Vous pouvez ajouter toutes ces informations de la manière suivante dans votre fichier ~/.ssh/config
 
-> [!Attention] Modifier mon nom et mon adresse IP pour vos valeur.
+> [!Attention] Modifier mon nom et mon adresse IP par votre usager et l'adresse ip de votre serveur.
 ```bash
 Host website
         Hostname 10.100.2.50
