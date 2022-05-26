@@ -86,6 +86,7 @@ Vous pouvez toujours vous référer à la page de manuel de ssh_config pour en s
 
 ## Sécuriser l'accès SSH du serveur de test
 
+Attention, les commande suivante doivent être exécutées avec l'élévation des privilèges entant que SUDO.
 
 Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Il est nécessaire de les sauvegarder avant de les modifier. 
 - Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
@@ -94,9 +95,9 @@ Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Il est nécess
 - Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
 
 ```bash
-$cp /etc/ssh/sshd_config /etc/ssh/sshd_configOld 
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_configOld 
 #au besoin récupérer votre fichier ainsi : 
-$cp /etc/ssh/sshd_configOld /etc/ssh/sshd_config
+sudo cp /etc/ssh/sshd_configOld /etc/ssh/sshd_config
 ``` 
 
 ![Dossier ssh](images/DossierSSH.png)
@@ -243,9 +244,9 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 - Par la suite, sur votre client à l'aide de la commande scp copiez votre clé SSH sur votre serveur :
 
 ```bash
-$scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
+scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
 #Exemple sur mon poste :
-$scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
+scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
 ```
 - Vous pouvez par la suite vous connecter au serveur : 
 
@@ -296,8 +297,15 @@ Si vous utilisez une ancienne distribution Linux. Certaines versions plus ancien
 Les versions plus récentes de SSH ont automatiquement activé le protocole 2, mais il n'y a pas de mal à le vérifier.
 
 
-**Fin de l'exercice**
+# Remise
 
+- Faite une capture d'une connexion ssh à partir du fichier de configuration ou website est votre serveur disant.
 
+```bash
+ssh website
+``` 
+Je dois pouvoir voir la commande et le résultat de connexion sur votre serveur.
+Déposer la capture sur LÉA comme preuve de réalisation de l'exercice 5.
 ### Lecture complémentaire :
+
 Plusieurs parties de cet exercice proviennent du site Web https://linuxhandbook.com/
