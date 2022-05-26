@@ -92,9 +92,6 @@ Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Comme tous fic
 
 - Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
 
-
-- Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
-
 ```bash
 sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_configOld 
 #au besoin récupérer votre fichier ainsi : 
@@ -104,7 +101,7 @@ sudo cp /etc/ssh/sshd_configOld /etc/ssh/sshd_config
 ![Dossier ssh](images/DossierSSH.png)
 
 
-##10 Techniques pour sécuriser votre serveur SSH : ##
+## 10 Techniques pour sécuriser votre serveur SSH :
 
 
 **1- Désactiver les mots de passe vides :**
