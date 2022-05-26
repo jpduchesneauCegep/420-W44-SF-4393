@@ -88,7 +88,8 @@ Vous pouvez toujours vous référer à la page de manuel de ssh_config pour en s
 
 >**[!Attention]** les commandes suivantes doivent être exécutées avec l'élévation des privilèges entant que SUDO.
 
-Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Il est nécessaire de les sauvegarder avant de les modifier. 
+Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Comme tous fichier de configuration qu'on modifie, il est nécessaire de les sauvegarder avant de les modifier. 
+
 - Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
 
 
