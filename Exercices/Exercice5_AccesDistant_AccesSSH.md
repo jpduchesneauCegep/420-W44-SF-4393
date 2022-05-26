@@ -86,7 +86,7 @@ Vous pouvez toujours vous référer à la page de manuel de ssh_config pour en s
 
 ## Sécuriser l'accès SSH du serveur de test
 
-Attention, les commande suivante doivent être exécutées avec l'élévation des privilèges entant que SUDO.
+>[!Attention] les commande suivante doivent être exécutées avec l'élévation des privilèges entant que SUDO.
 
 Les fichiers de configuration de SSH sont situés dans /etc/ssh/. Il est nécessaire de les sauvegarder avant de les modifier. 
 - Utilisez la technique suivante sur tous les fichiers de configuration que vous modifiez. Si j'aimais, il y a un problème, il est facile de revenir en arrière.
