@@ -241,12 +241,12 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 
 - Créer le dossier .ssh dans votre usager sur le serveur et créer le fichier authorized_keys dans le dossier
 
-- Par la suite, sur votre client à l'aide de la commande scp copiez votre clé SSH sur votre serveur :
+- Par la suite, sur votre client à l'aide de la commande scp copiez votre clé SSH sur votre serveur. Puisque nous avons précédemment changé le port de connexion au serveur, nous devons le spécifier&nbsp;:
 
 ```bash
-scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
+scp -P 2522 ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
 #Exemple sur mon poste :
-scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
+scp -P 2522 ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
 ```
 - Vous pouvez par la suite vous connecter au serveur : 
 
