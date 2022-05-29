@@ -3,7 +3,7 @@
 
 - Évaluation : formative
 - Durée estimée : 1 heure
-- Système d'exploitation : Ubuntu 20.04 Lts Client et serveur
+- Système d'exploitation : Ubuntu Client et serveur
 
 **Objectifs :**
 
