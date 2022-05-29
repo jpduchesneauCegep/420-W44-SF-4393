@@ -39,6 +39,7 @@ Source : Pro Git
 - Pousser votre modification sur votre dépôt sur Git Hub avec la commande push. Si vous avez bien inséré votre clé SSH sur GitHub, vous ne devriez pas avoir besoin de vous authentifier.
 - Sur votre page de GitHub, faites une demande de Pull Request pour que j'accepte de modifier le dépôt principal de votre contribution. Soyez gentil, écrivez un message avec votre demande.  Si non, peut-être que je n’accepterais pas votre demande.;-)
 
+Pour vous aidez : [https://git-scm.com/book/fr/v2/GitHub-Contribution-%C3%A0-un-projet]
 
 Votre clé SSH pourra être utilisée toute la session entre votre poste client et votre compte GitHub.
 
