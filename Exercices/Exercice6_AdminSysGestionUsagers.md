@@ -106,6 +106,5 @@ tail /etc/group
 ls -l /var/data
 ```
 
-Exemple de capture : 
 
 
