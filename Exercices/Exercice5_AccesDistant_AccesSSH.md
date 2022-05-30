@@ -244,9 +244,8 @@ Avant de le faire, vous devez garder à l'esprit les points suivants :
 - Par la suite, sur votre client à l'aide de la commande scp copiez votre clé SSH sur votre serveur :
 
 ```bash
-scp ~/.ssh/{votre clé}.pub {votreusager}@{adresse IP du serveur}:.ssh/authorized_keys
-#Exemple sur mon poste :
-scp ~/.ssh/id_rsa.pub jpduches@10.100.2.50:.ssh/authorized_keys
+ssh-copy-id {votreusager}@{adresse IP du serveur}
+# Entrer le mot de passe de l'usager.
 ```
 - Vous pouvez par la suite vous connecter au serveur : 
 
