@@ -4,7 +4,7 @@
 
    - Ce serveur doit utiliser un système de stockage LVM.
    - IL a carte réseau présente sur le réseau 10.100.2.0/24
-   - Il y 2 processeurs et 4 Go de mémoire vive.
+   - Il y a 2 processeurs et 4 Go de mémoire vive.
    - Ce serveur devrait pouvoir être accédé depuis une machine client depuis le protocole ssh. 
    - Il faut que le service ssh soit sécurisé.
    - Il devrait être prêt à servir de modèle pour le déploiement de services supplémentaires.
