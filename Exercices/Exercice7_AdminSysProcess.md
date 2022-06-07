@@ -240,7 +240,7 @@ Pour mettre à jour la base de données sur lequel se fie l'index utilisé par l
 </details>
 
 
-- Taper la commande sudo updatedb et refaire ensuite la commande locate toto vous devriez maintînt trouver le fichier toto.
+- Taper la commande sudo updatedb et refaire ensuite la commande locate toto vous devriez maintenant trouver le fichier toto.
 
 - Taper maintenant la commande :
 
