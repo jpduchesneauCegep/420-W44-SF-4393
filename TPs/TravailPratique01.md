@@ -3,7 +3,7 @@
 **But :** le but de ce laboratoire est de **documenter** la procédure d'installation d'un serveur Ubuntu 22.04 LTS dans votre environnement de test.  **Attention documenter n'est pas installer**
 
    - Ce serveur doit utiliser un système de stockage LVM.
-   - IL a carte réseau présente sur le réseau 10.100.2.0/24
+   - Il a carte réseau présente sur le réseau 10.100.2.0/24
    - Il y a 2 processeurs et 4 Go de mémoire vive.
    - Ce serveur devrait pouvoir être accédé depuis une machine client depuis le protocole ssh. 
    - Il faut que le service ssh soit sécurisé.
@@ -30,18 +30,17 @@
       - update
       - upgrade
 
-4. Procédure de validation de l'installation.
+3. Procédure de validation de l'installation.
 
    Cette procédure utilisée par une tierce personne devrait démontrer le bon fonctionnent du serveur et comprendre les commandes nécessaires à la vérification des caractéristiques du serveur.
 
 
 ## Vous devez fournir :
 
-- Un dépôt GitHub de votre travail
-
-    - Attention ce dépôt doit être privé
+- Un dépôt GitHub Classroom de votre travail
+-
     - Le professeur doit être collaborateur ainsi que les 2 membres de l'équipe
-    - Un fichier readme.md qui résume les informations sur le dépôt
+    - Un fichier auteurs.md qui résume les informations sur le dépôt
          - Date 
          - Membre de l'équipe
          - Contexte
@@ -51,7 +50,7 @@
 
 ## Consignes :
 
-- Le temps  alloué en classe est de trois (3) périodes de 1 heure pour un total de trois (3) heures.
+- Le temps  alloué en classe est de trois (2) périodes pour un total de trois (3) heures.
 - La date de remise est celle indiquée sur LÉA.
 - Ce travail pratique vaut pour 10 % de la note finale.
 - Ce travail est réalisé en équipe de 2 membres et seuls les membres de cette équipe y contribuent.
@@ -68,10 +67,10 @@
 
 
 ## Évaluation :
-|Item |Points  |
---- | --- | 
-|Dépôt GitHub |20|
-|Respect des caractéristiques |20|
-|Mise à jour préalable  |30|
-|Procédure de vérification |30|
-|Total|100
+|Item |Points  |Résultat 
+--- | --- | ---|
+|Dépôt GitHub |20||
+|Respect des caractéristiques |20||
+|Mise à jour préalable  |30||
+|Procédure de vérification |30||
+|Total|100||
