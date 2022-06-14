@@ -305,7 +305,7 @@ phpinfo();
 ```
 - Exécutez ce fichier dans votre navigateur en tapant l'URL suivant :
 
-***[adresse IP du serveur]/info.php***
+***http://[adresse IP du serveur]/info.php***
 
 [Image du navigateur](images/info.png)
 
