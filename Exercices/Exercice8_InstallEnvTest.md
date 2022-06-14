@@ -225,11 +225,6 @@ quit
 ## Le langage de programmation PHP
 
 
-
-Mise en situation :  Nous allons avoir besoin du langage de programmation PHP pour la mise ne production de notre site Web avec WordPress dans les futurs exercices.
-
-
-
 ```bash
 sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
 ```
