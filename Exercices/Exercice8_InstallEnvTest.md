@@ -34,17 +34,7 @@ sudo apt upgrade
 ```bash
 ssh {adresse ip du serveur}  [-l votre nom d'usager sur le serveur] [-p port]
 
-sudo apt update
-sudo apt upgrade
 ```
-
-- Procéder à la mise à jour de votre poste client: 
-
-```bash
-sudo apt update
-sudo apt upgrade
-```
-
  
 >[Attention] nous allons régulièrement avoir besoin d'un éditeur de texte en mode console. Vous pouvez utiliser l'un des éditeurs suivants : 
 
