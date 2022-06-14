@@ -224,6 +224,7 @@ quit
 
 ## Le langage de programmation PHP
 
+Procéder à l'installation de php et ses différent modules.
 
 ```bash
 sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
@@ -231,7 +232,7 @@ sudo apt install php-fpm php-cli php-mysql php-curl php-json -y
 - Répondez oui 
 
 
-- Maintenant, vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.
+- Maintenant, vous devez éditer le fichier de configuration du site virtuel par défaut de Nginx.(Plus tard dans la session nous allons aborder les notions sur les ficiers de configuration de Nginx)
 - Mais avant d'éditer un fichier de configuration, procéder toujours à une copie de sauvegarde comme ceci : 
 ```bash
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/defaultOld
