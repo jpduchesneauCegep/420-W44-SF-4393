@@ -293,7 +293,7 @@ server {
 
 - Enregistrez et fermez le fichier puis activez le fichier de configuration de l'hôte virtuel Nginx avec la commande suivante :
 ```bash
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 ```
 -Ensuite, vérifiez la configuration Nginx pour éviter  toute erreur de syntaxe avec la commande suivante :
 ```bash
