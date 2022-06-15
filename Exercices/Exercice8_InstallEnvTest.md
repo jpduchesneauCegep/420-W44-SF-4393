@@ -64,7 +64,7 @@ Fichier="./espaceDisque.txt"
 
 date >> $Fichier   # pour avoir la date et l'heure de l'exécution.
 df -H | grep /dev/sda >> $Fichier # Envoi de l'information dans le fichier
-df -H | grep /dev/mapper/*  >> $Fichier
+df -H | grep /dev/mapper/ubuntu--vg-ubuntu--lv  >> $Fichier
 # Le script va afficher le résultat
 cat $Fichier
 ```
