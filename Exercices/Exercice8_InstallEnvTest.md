@@ -148,24 +148,29 @@ sudo mysql_secure_installation
 
 ![Attention] : Si vous avez cette erreur : 
 
-```bash
+```
 Failed! Error: SET PASSWORD has no significance for user ‘root’@’localhost’ as the authentication method used doesn’t store authentication data in the MySQL server. Please consider using ALTER USER instead if you want to change authentication parameters
 ```
-
+Faite ce qui suit dans details :
 <details>
-Faite ce qui suit :
+
  - Tout d'abord, vous devez changer les paramètres d'authentification. Pour ce faire, exécutez d'abord cette commande.
-```bash
+
+ ```bash
  sudo mysql
  ```
+ 
  - Ensuite, exécutez cette requête ALTER pour changer les paramètres d'authentification.
+ 
 ```sql
  ALTER USER 'root'@'localhost' IDENTIFIÉ AVEC mysql_native_password par 'mynewpassword' ;
  ```
 Et maintenant, vous êtes en mesure d'exécuter la commande mysql_secure_installation.
+ 
 ```bash
 sudo mysql_secure_installation
  ```
+ 
 Maintenant, votre erreur doit être résolue. Merci.
  
 Source : https://exerror.com/failed-error-set-password-has-no-significance-for-user-rootlocalhost-as-the-authentication-method-used-doesnt-store-authentication-data-in-the-mysql-server/
