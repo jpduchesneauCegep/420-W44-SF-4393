@@ -249,7 +249,7 @@ sudo nano /etc/nginx/sites-available/default
 ```bash
 server {
         listen 80;
-        server_name test.example.com;
+        server_name localhost;
         root /var/www/html;
         index index.php;
 
