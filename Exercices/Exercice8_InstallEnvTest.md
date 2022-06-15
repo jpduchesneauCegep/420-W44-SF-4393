@@ -138,9 +138,6 @@ sudo mysql_secure_installation
     - Vous devrez par la suite répondre niveaux de politique de validation des mots de passe suivante  :  STRONG Longueur >=8 numérique, chargement de la case, caractères spéciaux et ne pas être un mot du dictionnaire.
     - **Exemple** : e4l*j3Wj
 
-
-
-
 - Votre mot de passe root devra suivre toutes les exigences que vous avez configurées à l’étape précédente.
 - Le système vous demandera les fonctions de sécurités suivantes : 
     - Supprimer les utilisateurs anonymes ? Y
@@ -149,8 +146,24 @@ sudo mysql_secure_installation
     - Recharger les tables de privilèges maintenant ? Y
 
 
-
-
+![Attention] : Si vous avez cette erreur : 
+<detail>
+Faite ce qui suit :
+ - Tout d'abord, vous devez changer les paramètres d'authentification. Pour ce faire, exécutez d'abord cette commande.
+```bash
+ sudo mysql
+ ```
+ - Ensuite, exécutez cette requête ALTER pour changer les paramètres d'authentification.
+```sql
+ ALTER USER 'root'@'localhost' IDENTIFIÉ AVEC mysql_native_password par 'mynewpassword' ;
+ ```
+Et maintenant, vous êtes en mesure d'exécuter la commande mysql_secure_installation.
+```bash
+sudo mysql_secure_installation
+ ```
+Maintenant, votre erreur doit être résolue. Merci.
+Source : https://exerror.com/failed-error-set-password-has-no-significance-for-user-rootlocalhost-as-the-authentication-method-used-doesnt-store-authentication-data-in-the-mysql-server/
+</detail>
 - Vérifier que MySQL fonctionne, entrer le commande : 
 ```bash
 sudo service mysql status
