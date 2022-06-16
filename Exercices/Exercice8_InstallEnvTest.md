@@ -163,7 +163,7 @@ Faite ce qui suit dans details :
  - Ensuite, exécutez cette requête ALTER pour changer les paramètres d'authentification.
  
 ```sql
- ALTER USER 'root'@'localhost' IDENTIFIÉ AVEC mysql_native_password par 'mynewpassword' ;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password by 'mynewpassword';
  ```
 Et maintenant, vous êtes en mesure d'exécuter la commande mysql_secure_installation.
  
