@@ -168,3 +168,6 @@ Sur Linux ctrl+C éteint le conteneur. Sur Windows il fonctionne toujours.
   ``` 
   - Vous avez donc accès au log est aux processus du conteneur.
 
+## Pour vérification
+Remettre une capture d’écran des deux dernières commandes dans l'espace travaux, exercice 9 sur LÉA.
+N'oubliez pas, je dois pouvoir identifier votre VMs.
