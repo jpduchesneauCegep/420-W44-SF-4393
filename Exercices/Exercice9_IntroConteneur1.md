@@ -150,7 +150,7 @@ Sur Linux ctrl+C éteint le conteneur. Sur Windows il fonctionne toujours.
   docker container run --publish 8082:80 --detach --name nginx_webserver2 nginx
   docker container run --publish 8083:80 --detach --name nginx_webserver3 nginx
   ```
-  - Un petit truc pour supprimer tous les conteneurs :
+  - Un petit truc pour supprimer tous les conteneurs (Linux ou Git Bash sur Windows) :
    ```bash
    docker container stop $(docker ps -a -q)
    docker container rm $(docker ps -a -q)
