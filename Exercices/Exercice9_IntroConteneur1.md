@@ -30,7 +30,8 @@ La version minimum de Windows 10 pour utiliser WSL 2 est Windows 10 Build 18917.
 
 
 ```bash
-apt install docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
 ```
 
 </details>
