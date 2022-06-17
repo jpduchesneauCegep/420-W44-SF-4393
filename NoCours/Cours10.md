@@ -13,6 +13,26 @@ Pour un total de 25 points qui représente 15% de la session.
 ---
 Aujourd'hui :
 
-- Docker 
-- Exercice 9 - Docker : Prise en main des conteneurs Docker
+## Retour sur l'exercice 8
 
+- Localhost et votre Ip la différence.
+- La version de Php
+        - c'Est le CGI(voir note de référence) 
+
+        ```bash
+        location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/run/php/php8.1-fpm.sock;
+         }
+        ```
+        
+ - systemctl restart/reload nginx quant l'utiliser.
+
+## Docker 
+##  Exercice 9 - Docker : Prise en main des conteneurs Docker
+
+---
+Références :
+ CGI : https://fr.wikipedia.org/wiki/Common_Gateway_Interface
+ Nginx : https://nginx.org/en/docs/
+ fichier hosts : https://fr.wikipedia.org/wiki/Hosts
