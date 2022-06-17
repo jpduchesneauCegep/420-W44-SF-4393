@@ -33,6 +33,6 @@ Aujourd'hui :
 
 ---
 Références :
- CGI : https://fr.wikipedia.org/wiki/Common_Gateway_Interface
- Nginx : https://nginx.org/en/docs/
- fichier hosts : https://fr.wikipedia.org/wiki/Hosts
+ - CGI : https://fr.wikipedia.org/wiki/Common_Gateway_Interface
+ - Nginx : https://nginx.org/en/docs/
+ - fichier hosts : https://fr.wikipedia.org/wiki/Hosts
