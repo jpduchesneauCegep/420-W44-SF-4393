@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 
 - Pour compiler votre programme, utilisez la commande ```g++ premier-programme.cpp -o premier-programme -static ```
 
-- Créez le fichier "Docker" avec le contenu suivant :
+- Créez le fichier "Dockerfile" avec le contenu suivant :
   
   ```dockerfile
   FROM scratch
