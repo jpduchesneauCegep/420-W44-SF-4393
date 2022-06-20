@@ -1,10 +1,5 @@
 # Exercice 10 - Docker : Dockerfile
 
-- Évaluation : formative
-- Durée estimée : 2 heures
-- Système d'exploitation : Ubuntu Client 
-
-
 ## Exercice 1 - Créez le programme hello-world
 
 - Sous Windows :  lancez une console Ubuntu.
@@ -23,7 +18,7 @@ int main(int argc, char** argv) {
 
 - Pour compiler votre programme, utilisez la commande ```g++ premier-programme.cpp -o premier-programme -static ```
 
-- Créez le fichier "Dockerfile" avec le contenu suivant :
+- Créez dans le même répertoire que votre fichier "premier-programme" précédemment compilé, le fichier "Dockerfile" avec le contenu suivant :
   
   ```dockerfile
   FROM scratch
