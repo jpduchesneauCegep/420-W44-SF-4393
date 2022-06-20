@@ -1,5 +1,9 @@
 # Exercice 9 - Docker : Prise en main des conteneurs docker
 
+- Évaluation : formative
+- Durée estimée : 2 heures
+- Système d'exploitation : Ubuntu Client 
+
 
 ## Préambule - testez votre installation
 
