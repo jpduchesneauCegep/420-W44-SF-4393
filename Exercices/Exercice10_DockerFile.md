@@ -70,9 +70,17 @@ apt install g++
 - Testez manuellement votre programme
 
 <details>
-    <summary>Création et compilation du programme en local</summary>
+    <summary>Installation dotnet, création et compilation du programme en local</summary>
 
-```bash
+```bash   
+wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-6.0
+    
 dotnet new console -o premier-conteneur-csharp
 cd premier-conteneur-csharp
 dotnet run
@@ -80,16 +88,16 @@ dotnet run
 
 </details>
 
-- Pour compiler votre programme, nous allons utiliser ici une image docker contenant le SDK de dotnet 3.1. Nous allons ensuite copier le résultat dans une nouvelle image qui ne contient que l'environnement d'exécution de dotnet core 3.1. Pour cela, placez-vous dans le répertoire du projet et créez le fichier Dockerfile suivant :
+- Pour compiler votre programme, nous allons utiliser ici une image docker contenant le SDK de dotnet 6.0 Nous allons ensuite copier le résultat dans une nouvelle image qui ne contient que l'environnement d'exécution de dotnet 6.0 Pour cela, placez-vous dans le répertoire du projet et créez le fichier Dockerfile suivant :
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /source
 
 COPY . .
 RUN dotnet publish -c release -o /app
 
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+FROM mcr.microsoft.com/dotnet/runtime:6.0
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["./premier-conteneur-csharp"]
