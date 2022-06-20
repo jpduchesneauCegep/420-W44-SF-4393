@@ -1,5 +1,9 @@
 # Exercice 10 - Docker : Dockerfile
 
+- Évaluation : formative
+- Durée estimée : 2 heures
+- Système d'exploitation : Ubuntu Client 
+
 ## Exercice 1 - Créez le programme hello-world
 
 - Sous Windows :  lancez une console Ubuntu.
