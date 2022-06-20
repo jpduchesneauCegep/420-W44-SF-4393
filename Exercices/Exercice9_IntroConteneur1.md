@@ -85,6 +85,12 @@ docker image history hello-world
   docker container run --publish 80:80 nginx
   ```
 
+- - **Attention !** Si vous utilisez votre serveur Ubuntu et que le service nginx de l'exercice précédent est toujours en marche, vous allez rencontrer ce message&nbsp;:
+- - ```Error starting userland proxy: listen tcp4 0.0.0.0:80: bind: address already in use.```
+- - Vous devez simplement arrêter le service précédent :
+- - ```sudo systemctl stop nginx```
+- - Maintenant, essayez à nouveau.
+
 
 - Cette commande démarre un nouveau conteneur utilisant nginx téléchargée depuis DockerHub.
 - La partie **publish 80:80** expose le port local 80 de la machine hôte, et redirige tout le trafic à l'application exécutable dans un comeneur sur sont port 80.
@@ -101,7 +107,7 @@ Sur Linux ctrl+C éteint le conteneur. Sur Windows il fonctionne toujours.
   ```
 - Vérifier dans le navigateur l'URL localhost, vous devriez avoir la page de nginx.
 - Vous ne voyez plus les tentatives de connexion sur le serveur Web.
-- Faites un "docker conteneur ls". Voyez-vous quelque chose ?
+- Faites un "docker container ls". Voyez-vous quelque chose ?
 - Faites un "docker info". Vous voyez les images et les conteneurs.
 
 
