@@ -204,7 +204,7 @@ docker run --rm --name wordpress -d -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS
 
 
 ## Pour vérification
-Remettre une capture d’écran de votre site WordPress et du ps de vos contenueurs dans l'espace travaux, exercice 12 sur LÉA.
+Remettre une capture d’écran de votre site WordPress et du ps de votre contenueur dans l'espace travaux, exercice 12 sur LÉA.
 N'oubliez pas, je dois pouvoir identifier votre VMs.
 
 ### Exercice 6.2 - Wordpress - Un début d'orchestration ?
