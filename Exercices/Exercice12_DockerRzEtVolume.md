@@ -99,6 +99,7 @@ dotnet run
 ```
 - Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. Probablement 5001.
 </details>
+
 ### Exercice 4.2 - Création d'un compte docker hub
 
 - Allez sur le site de docker hub et créez-vous un compte
