@@ -63,8 +63,9 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 
 ### Exercice 4.1 - Création d'un projet MVC en .Net core
 
-- À partir d'un terminal et de la commande dotnet, créez une application :
 - Au besoins, procéder à l'installation : https://dotnet.microsoft.com/en-us/download
+- À partir d'un terminal et de la commande dotnet, créez une application :
+
   - Type : mvc
   - Nom : webapp
 - Modifiez le fichier "Views/Home/Index.cshtml" pour y ajouter votre prénom / nom
