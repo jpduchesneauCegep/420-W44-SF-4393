@@ -133,8 +133,6 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 
 ### Exercice 4.3 - Publication
 
-- Allez sur le site de docker hub et créez-vous un compte
-- Créez un dépot nommé "webapp"
 - Sur un terminal faites un "docker login" et tapez vos informations de connexion
 - Faites un "docker push <votre_docker_id>/webapp:latest". La première fois que vous allez effectuer cette commande, il va vous demander vos informations de connexion.
 - Allez dans votre compte sur docker hub et validez que votre image est bien présente.
