@@ -1,7 +1,7 @@
 ﻿# Exercice 12 - Docker  : volume et redirection de port
 
 - Évaluation : formative
-- Durée estimée : 2 heure
+- Durée estimée : 2 heures
 - Système d'exploitation : Ubuntu 20.04 Lts Client 
 
 Note : créez répertoire Exercice12 puis un répertoire par exercice.
