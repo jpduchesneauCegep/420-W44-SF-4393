@@ -86,6 +86,8 @@ $docker run -d --rm --name mysql \
     -e MYSQL_ROOT_PASSWORD=Passw0rd -e MYSQL_DATABASE=wordpress \
     -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=Passw0rd \
     -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql
+    
+# Attention : la version latest de mysql provoque des erreurs de connexions. Utiliser mysql:5.7
 
 $docker run --rm --name wordpress -d \
     -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS_DB_USER=wordpress \
