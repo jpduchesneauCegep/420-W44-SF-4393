@@ -71,7 +71,15 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
-  
+
+
+ # Créer le fichier /etc/apt/preferences
+sudo nano /etc/apt/preferences
+# ajouter le contenue suivant : 
+Packgage: *
+Pin: origin "packages.microsoft.com"
+Pin-Priority:1001
+
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-6.0
   
