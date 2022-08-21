@@ -127,7 +127,7 @@ docker build --tag [votre_docker_id]/webapp:latest .
 - Allez dans votre compte sur docker hub et validez que votre image est bien présente.
 - Supprimez votre version locale
 - Démarrez un conteneur à partir de l'image qui est sur docker hub et validez que tout fonctionne
-- Demandez le nom de l'image d'un de vos collègues ou utilisez mon image "pifou/webapp"
+- Demandez le nom de l'image d'un de vos collègues ou utilisez mon image "jpduches/webapp"
 - Démarrez un conteneur avec cette image et validez que tout fonctionne
 - Nettoyez vos conteneurs en supprimant ceux créés dans cet exercice.
 
