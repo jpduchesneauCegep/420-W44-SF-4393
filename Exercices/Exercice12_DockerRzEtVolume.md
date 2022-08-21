@@ -81,6 +81,7 @@ Installing .NET 6 on Ubuntu 22.04 (Jammy) https://github.com/dotnet/core/issues/
 
 ```bash
 dotnet new mvc -au None -n webapp
+cd webapp/
 dotnet run
 ```
 - Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. Probablement 5001.
