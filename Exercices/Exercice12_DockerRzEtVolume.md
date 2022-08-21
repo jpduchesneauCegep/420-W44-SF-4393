@@ -63,32 +63,11 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 
 ### Exercice 4.1 - Création d'un projet MVC en .Net core
 
-- Au besoins, procéder à l'installation : https://dotnet.microsoft.com/en-us/download
-
-<details>
-  
-```bash
-wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
+- Au besoins, procéder à l'installation : 
+Installing .NET 6 on Ubuntu 22.04 (Jammy) https://github.com/dotnet/core/issues/7699
 
 
- # Créer le fichier /etc/apt/preferences
-sudo nano /etc/apt/preferences
-# ajouter le contenue suivant : 
-Packgage: *
-Pin: origin "packages.microsoft.com"
-Pin-Priority:1001
 
-sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-6.0
-  
-sudo apt-get update && \
-  sudo apt-get install -y aspnetcore-runtime-6.0
- 
-
-```
-</details>
 
 - À partir d'un terminal et de la commande dotnet, créez une application :
 
