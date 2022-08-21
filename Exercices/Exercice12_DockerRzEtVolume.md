@@ -96,7 +96,7 @@ dotnet run
 - Créez le fichier Dockerfile avec le contenu suivant :
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
 COPY *.csproj ./
