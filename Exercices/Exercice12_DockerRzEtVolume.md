@@ -84,7 +84,7 @@ dotnet new mvc -au None -n webapp
 cd webapp/
 dotnet run
 ```
-- Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. Probablement 5001.
+- Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. 
 </details>
 
 ### Exercice 4.2 - Création d'un compte docker hub
