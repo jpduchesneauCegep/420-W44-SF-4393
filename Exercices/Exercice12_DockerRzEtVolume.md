@@ -67,8 +67,6 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 Installing .NET 6 on Ubuntu 22.04 (Jammy) https://github.com/dotnet/core/issues/7699
 
 
-
-
 - À partir d'un terminal et de la commande dotnet, créez une application :
 
   - Type : mvc
@@ -98,7 +96,7 @@ dotnet run
 - Créez le fichier Dockerfile avec le contenu suivant :
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:6.0 AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk AS build-env
 WORKDIR /app
 
 COPY *.csproj ./
@@ -107,7 +105,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/core/aspnet
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "webapp.dll"]
@@ -115,6 +113,10 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 
 - Assurez-vous de bien comprendre chaque ligne du fichier Dockerfile
 - Construisez l'image "<votre_docker_id>/webapp" avec la version "latest"
+
+```bash 
+docker build --tag [votre_docker_id]/webapp:latest .
+```
 - Exécutez un conteneur à partir de cette image en liant le port 80 du conteneur au port 5000 de l'hôte
 - Validez que le tout fonctionne (attention vous allez être en http)
 
