@@ -17,6 +17,7 @@ $docker tag <image> username/repository:tag  # Tag <image> for upload to registr
 $docker push username/repository:tag      # Upload tagged image to registry
 $docker run username/repository:tag       # Run image from a registry
 
+
 ```
 
 
@@ -34,7 +35,8 @@ $docker run --name test1 -it busybox
 $docker run -p 4000:80 friendlyhello          # Run "friendlyname" mapping port 4000 to 80
 $docker run -d -p 4000:80 friendlyhello        # Same thing, but in detached mode
 $docker run -p 3307:3306 -e MYSQL_ROOT_PASSWORD=Passw0rd -d --name MonMySQL  mysql:latest
-# Autre exemple avec mappage et nom de conteneur.
+# Rentrer dans le container avec un shell :
+$docker container exec -it mon-container bash 
 ```
 ## Gestion des réseaux : 
 ```bash

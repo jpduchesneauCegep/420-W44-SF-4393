@@ -1,7 +1,7 @@
 ﻿# Exercice 12 - Docker  : volume et redirection de port
 
 - Évaluation : formative
-- Durée estimée : 2 heures
+- Durée estimée : 4 heures
 - Système d'exploitation : Ubuntu 20.04 Lts Client 
 
 Note : créez répertoire Exercice12 puis un répertoire par exercice.
@@ -38,7 +38,7 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 
 - Sur un premier terminal, lancez en arrière plan (-d) l'image "nginx" sans spécifier de redirection de port avec le nom "mon_nginx" (--name)
 - Faite un "docker inspect mon_nginx" afin de trouver l'adresse du conteneur
-- Sur un autre terminal, lancez l'image "browsh/browsh" en mode intéractif (-it)
+- Sur un autre terminal, lancez l'image "browsh/browsh" en mode intéractif (-it) ([Documentation browsh/browsh](https://hub.docker.com/r/browsh/browsh)).
 - Faites un "Ctrl-l" et tapez l'adresse IP de votre serveur web. Le site par défaut d'Nginx devrait s'afficher. Pour quitter faites un "Ctrl-q" (pour les autres commandes faites un "F1").
 - À partir de votre navigateur favori, essayer de naviguer l'adresse IP que vous aviez. Essayez avec l'adresse locale.
 - Qu'observez-vous et pourquoi ?
@@ -63,25 +63,9 @@ Dans cet exercice, vous allez devoir utiliser l'image "nginx" afin de créer un 
 
 ### Exercice 4.1 - Création d'un projet MVC en .Net core
 
-- Au besoins, procéder à l'installation : https://dotnet.microsoft.com/en-us/download
+- Au besoins, procéder à l'installation : 
+Installing .NET 6 on Ubuntu 22.04 (Jammy) https://github.com/dotnet/core/issues/7699
 
-<details>
-  
-```bash
-wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-rm packages-microsoft-prod.deb
-  
-sudo apt-get update && \
-  sudo apt-get install -y dotnet-sdk-6.0
-  
-sudo apt-get update && \
-  sudo apt-get install -y aspnetcore-runtime-6.0
-  
-sudo apt-get install -y dotnet-runtime-6.0
-
-```
-</details>
 
 - À partir d'un terminal et de la commande dotnet, créez une application :
 
@@ -95,9 +79,10 @@ sudo apt-get install -y dotnet-runtime-6.0
 
 ```bash
 dotnet new mvc -au None -n webapp
+cd webapp/
 dotnet run
 ```
-- Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. Probablement 5001.
+- Testez l'application localement: Ouvrez un navigateur avec localhost et le port mentionné pour le dotnet run. 
 </details>
 
 ### Exercice 4.2 - Création d'un compte docker hub
@@ -111,7 +96,7 @@ dotnet run
 - Créez le fichier Dockerfile avec le contenu suivant :
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 
 COPY *.csproj ./
@@ -120,7 +105,7 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "webapp.dll"]
@@ -128,6 +113,10 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 
 - Assurez-vous de bien comprendre chaque ligne du fichier Dockerfile
 - Construisez l'image "<votre_docker_id>/webapp" avec la version "latest"
+
+```bash 
+docker build --tag [votre_docker_id]/webapp:latest .
+```
 - Exécutez un conteneur à partir de cette image en liant le port 80 du conteneur au port 5000 de l'hôte
 - Validez que le tout fonctionne (attention vous allez être en http)
 
@@ -138,7 +127,7 @@ ENTRYPOINT ["dotnet", "webapp.dll"]
 - Allez dans votre compte sur docker hub et validez que votre image est bien présente.
 - Supprimez votre version locale
 - Démarrez un conteneur à partir de l'image qui est sur docker hub et validez que tout fonctionne
-- Demandez le nom de l'image d'un de vos collègues ou utilisez mon image "pifou/webapp"
+- Demandez le nom de l'image d'un de vos collègues ou utilisez mon image "jpduches/webapp"
 - Démarrez un conteneur avec cette image et validez que tout fonctionne
 - Nettoyez vos conteneurs en supprimant ceux créés dans cet exercice.
 
@@ -215,7 +204,7 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -p 3306:3306 -v 
     <summary>Solution</summary>
 
 ```bash
-docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=Passw0rd -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql
+docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD=Passw0rd -e MYSQL_DATABASE=wordpress -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=Passw0rd -p 3306:3306 -v /Users/pfl/tmp/msyql:/var/lib/mysql mysql:5.7
 
 docker run --rm --name wordpress -d -e WORDPRESS_DB_HOST=172.17.0.2 -e WORDPRESS_DB_USER=wordpress -e WORDPRESS_DB_PASSWORD=Passw0rd -e WORDPRESS_DB_NAME=wordpress -e WORDPRESS_TABLE_PREFIX=wp_ -p 8080:80 wordpress
 ```
