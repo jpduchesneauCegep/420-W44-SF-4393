@@ -181,6 +181,12 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210422_Ub2004Cli
  sudo usermod -aG adm,sudo  deploy
 ```
 
+- Autoriser le service ssh sur srv-apache-1
+
+        sudo apt-get install openssh-server
+        sudo systemctl enable ssh --now
+        sudo systemctl start ssh
+
 - Dans votre machine de gestion, ajouter à votre fichier /etc/hosts l'adresse ip et le nom de votre srv-apache-1.
 
 
