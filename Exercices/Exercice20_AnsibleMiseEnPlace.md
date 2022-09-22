@@ -126,6 +126,7 @@ Pour que Ansible prennent en considération notre répertoire nous allons créer
 ```bash
 vi ./ansible.cfg
 #contenu du fichier :
+[defaults]
 inventory   = ./inventaire
 remote_user = deploy
 log_path    = ./.traces_d_ansible
