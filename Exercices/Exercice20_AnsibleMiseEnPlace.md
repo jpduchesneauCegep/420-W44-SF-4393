@@ -126,6 +126,7 @@ Pour que Ansible prennent en considération notre répertoire nous allons créer
 ```bash
 vi ./ansible.cfg
 #contenu du fichier :
+[defaults]
 inventory   = ./inventaire
 remote_user = deploy
 log_path    = ./.traces_d_ansible
@@ -163,7 +164,7 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210422_Ub2004Cli
 - Sélectionnez le modèle de VM et cliquez sur le bouton droit de votre souris et sélectionnez Nouvelle VM à partir de ce modèle...
 - Suivez les étapes 
     - Nom de la VM : srv-apache-[matricule]
-    - Emplacement : DFC DS -> VM DFC -> H22_4392_420W45_ISS_JPD
+    - Emplacement : DFC DS -> VM DFC -> E22_4393_420W44_ITV_JPD
     - Stockage : SAN-DFC
     
 - Après votre connexion, changer les informations suivantes 
@@ -179,6 +180,12 @@ DFC DS -> VM DFC -> Modeles -> Production -> TPL_20210422_Ub2004Cli
  sudo adduser deploy 
  sudo usermod -aG adm,sudo  deploy
 ```
+
+- Autoriser le service ssh sur srv-apache-1
+
+        sudo apt-get install openssh-server
+        sudo systemctl enable ssh --now
+        sudo systemctl start ssh
 
 - Dans votre machine de gestion, ajouter à votre fichier /etc/hosts l'adresse ip et le nom de votre srv-apache-1.
 
