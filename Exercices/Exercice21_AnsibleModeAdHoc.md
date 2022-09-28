@@ -48,7 +48,7 @@ Maintenant, nous pouvons faire les commandes ad hoc:
 ```bash
 # Syntaxe :
 # Ansible -i[ fichier inventaire] [groupe de machine dans le fichier d'inventaire] -m [module]
-ansible -i invnetaire all -m ping
+ansible -i inventaire all -m ping
 ```
 Sortie : 
 
@@ -233,7 +233,7 @@ cat inventaire
 Maintenant, nous pouvons faire les commandes ad hoc:
 
 ```bash
-ansible -i invnetaire.yaml all -m ping
+ansible -i inventaire.yaml all -m ping
 ```
 **Attention : gardez une capture comme preuve de réalisation.**
 
@@ -282,6 +282,6 @@ ansible -i inventaire all -m copy -a "dest=/home/deploy/totot.txt content='Exerc
 ```
 
 ```bash
-ansible -i invnetaire.yaml all -m ping
+ansible -i inventaire.yaml all -m ping
 ```
 
