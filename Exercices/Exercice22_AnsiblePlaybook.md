@@ -231,8 +231,8 @@ Nous allons y aller pour la façon la plus  simple bien sure, la moins sûr :
       package: name=epel-release state=present
       when: ansible_distribution == "CentOS" # Ici ajout d'une condition
     - name: Install python-pip
-      yum: 
-        name=pyton-pip 
+      apt: 
+        name=pyton3-pip 
         state=present 
         update_cache=yes
     - name: Install Docker python
