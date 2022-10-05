@@ -44,10 +44,7 @@ Attention : ne mettez pas de dépendance aux serveurs httpd.
   - Les clients devront faire partie d'un groupe appeler "prod"
   - Le mot de passe à utiliser pour toutes les connexions ssh devra être admin  pour toutes les machines du groupe "prod".
   - La variable "env" devra être égale à "production" pour toutes les machines du group "prod".
-  - Vous devez avoir 
-    - production 
-    - group_vars/
-    - host_vars/
+
 ### Vous devez avoir des playbook pour :
 
 - LoadBalanceur
