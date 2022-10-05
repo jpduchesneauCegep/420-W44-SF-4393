@@ -46,13 +46,13 @@ Attention : ne mettez pas de dépendance aux serveurs httpd.
   - La variable "env" devra être égale à "production" pour toutes les machines du group "prod".
   - Vous devez avoir 
     - production 
-    - staging
     - group_vars/
     - host_vars/
 ### Vous devez avoir des playbook pour :
 
 - LoadBalanceur
 - Web
+- php
 - bd
 
 ### Votre déploiement :
